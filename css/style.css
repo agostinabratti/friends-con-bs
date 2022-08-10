@@ -25,7 +25,8 @@ ul :hover{
     font-size: 2.5rem;
     text-align: right;
     text-decoration: none;
-    font-family: 'Darker Grotesque', sans-serif;         
+    font-family: 'Darker Grotesque', sans-serif;  
+    color: yellow;     
 }
 li {
     display: inline-block;    
@@ -96,16 +97,11 @@ footer{
         margin-top: 2rem;
 }
 .mainparrafo{   
-    margin: 3rem 0.5rem 3rem 1rem;
+    margin: 3rem 0.5rem 3rem 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
 }
-#sectionparrafo{
-    text-decoration: none;
-    font-size: 2rem;
-    font-family: 'Darker Grotesque', sans-serif;
-    display: inline-block;
-    margin: 2rem 3rem 4rem 0rem;
-    padding-left: 2%;
-}
+
 .iconosfooter {
     display: flex;
     flex-direction: column;
@@ -115,6 +111,9 @@ footer{
 div p {
     font-family: friends;
     font-size: 2rem;
+}
+.listadoDeEpisodios{
+    margin: 1rem;
 }
 .letra {
     font-family: friends;
@@ -157,12 +156,15 @@ div p {
     justify-content: space-around;
     row-gap: 50px;
 }
+
+/* personajes */
+
 .articleGrid{
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 130px);
     text-align: center;
-    margin-top: 40px;
+    padding-bottom: 6rem;
     grid-template-areas: 
     "p1 f1 f2 f3"
     "p1 n1 n2 n3"
@@ -237,13 +239,13 @@ div p {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }  
     .mainparrafo {
-        margin: 1rem;
-        width: 90%;
+        margin: 0.5rem;
         display: flex;
         flex-wrap: wrap;
-        padding: 1rem;
+        padding: 0.5rem;
     }
     .fixed {
         display: none;
@@ -262,8 +264,8 @@ div p {
         animation-timing-function: linear;
         animation-iteration-count: infinite; 
         display: inline-block;
-        margin-left: 15%;
-           
+        margin-left: 12%;
+                  
         
     }
     @keyframes animacion {
