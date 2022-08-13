@@ -129,6 +129,11 @@ footer{
     flex-direction: column;
     justify-content: center;
 }
+.imagenesMobile img {
+    margin: 3rem;
+    padding: 3rem;
+}
+
 /* episodios */
 div p {
     font-family: friends;
@@ -274,11 +279,11 @@ div p {
     }
     .hoverlist {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        padding: 1px;
-        margin: 1px;
+        justify-content: space-evenly;
+        padding: 0.5px;
+        margin: 0.5px;
     }  
     .mainparrafo {
         margin: 0.5rem;
@@ -286,9 +291,7 @@ div p {
         flex-wrap: wrap;
         padding: 0.5rem;
     }
-    .fixed {
-        display: none;
-    }
+
     .imagenesMobile img{
       width: 100%;
     }
@@ -303,10 +306,16 @@ div p {
         animation-timing-function: linear;
         animation-iteration-count: infinite; 
         display: inline-block;
-        margin-left: 12%;
-                  
+        margin-left: 12%;                 
         
     }
+
+
+    .palabrasfooter1, .palabrasfooter2,.palabrasfooter3, .palabrasfooter4,.palabrasfooter5 {
+        display: none;
+        
+    }
+    .palabrasfooter6
     @keyframes animacion {
         0% {color: purple;bottom: 10px}
         25% {color: blueviolet; top; 10px}
