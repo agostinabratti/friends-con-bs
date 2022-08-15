@@ -1,0 +1,231 @@
+@import '../scss/base/_variables.scss'
+
+html{ font-size: 62.5%}
+
+*{margin: 0; padding: 0;}
+
+body {
+    background-color: rgb(255, 255, 50)
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url(https://i.etsystatic.com/29404973/r/il/4398e1/3199260157/il_570xN.3199260157_mfws.jpg);
+    padding: 5px;
+    width: 100%;
+    height: 5%;
+    nav {
+        align-self: center;
+        align-content: flex-end;
+
+        ul {
+            list-style: none;
+            font-size: $letra;
+            text-align: right;
+            font-family: 'Darker Grotesque', sans-serif;
+            li {
+                display: inline-block;
+                border: solid black 1px;
+                
+                a {
+                    text-decoration: none;
+                    margin: 1rem;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    color:yellow;
+                    &:hover {
+                        
+                    }
+    }
+    }
+    }
+    }
+    }
+
+h1 {
+        font-size: 3rem;
+        text-align: center;
+        animation-name: animacion;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        position: relative;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        display: inline-block;
+        margin: 2rem;
+}
+@keyframes animacion {
+    0% {color: purple;}
+    13% {left: 50px;}
+    25% {color: blueviolet; left: 100px;}
+    35% {left: 150px}
+    50% {color: blue; left: 250px;}
+    65% {left: 350px;}
+    75% {color: blueviolet; left: 250px; }
+    85% {left: 150px;}
+    100% {color: purple; left: 50px;}
+}
+p {
+    font-size: $letra;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+.personajes {
+    display: flex;
+    flex-wrap: wrap;
+    display: inline-block;
+    
+}
+.imagenesPersonajes {
+    align-content: flex-end;
+    float: right;
+    border-radius: 5%;
+    padding: 2rem;
+    margin: 1rem;
+    
+}
+.articleGrid{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 130px);
+    text-align: center;
+    padding-bottom: 1rem;
+    grid-template-areas:
+    "p1 f1 f2 f3"
+    "p1 n1 n2 n3"
+    "p1 f4 f5 f6"
+    "p1 n4 n5 n6";
+}
+.f1{
+    grid-area: f1;
+    margin-top: 30px;
+}
+.f2{
+    grid-area: f2;
+    margin-top: 30px;
+}
+.f3{
+    grid-area: f3;
+    margin-top: 30px;
+}
+.f4{
+    grid-area: f4;
+}
+.f5{
+    grid-area: f5;
+}
+.f6{
+    grid-area: f6;
+}
+.n1{
+    grid-area: n1;
+    margin-top: 20px;
+}
+.n2{
+    grid-area: n2;
+    margin-top: 20px;
+}
+.n3{
+    grid-area: n3;
+    margin-top: 20px;
+}
+.n4{
+    grid-area: n4;
+}
+.n5{
+    grid-area: n5;
+}
+.n6{
+    grid-area: n6;
+}
+.p1{
+    grid-area: p1;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.mainparrafo{   
+    margin: 1rem 0.5rem 3rem 2rem;
+    padding-right: 2rem;   
+}
+.fixed{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    size: 3rem;
+}
+footer{
+    font-size: xx-large;
+    border: 1px solid rgb(5, 5, 5);
+    background-color: rgb(128, 133, 211);
+    width: 100%;
+    height: 195px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+}
+.iconosfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+// episodios
+ .hoverlist :hover {
+    margin: 1rem;
+    padding: 2px;
+ }
+ nav a {
+    font-size: $letra;
+    background-color: rgb(152, 115, 177);    
+    border: solid 1px black; 
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    
+    
+}
+table {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: large;  
+    margin-bottom: 5rem;  
+}
+.listadoDeEpisodios{
+    margin: 1rem;
+}
+.letra {
+    font-family: friends;
+    margin: 2rem;
+    src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);  
+}
+div p {
+    font-family: friends;
+    font-size: $letra;
+}
+
+div p {
+    font-family: 'Darker Grotesque', sans-serif;
+ }
+ .imagenesMobile img {
+    margin: 3rem;
+    padding: 3rem;
+}
+.flexVideos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+}
+
+
+
+
+ .colorparrafos :hover{
+    border: 0.4rem solid black;
+    background-color: #7375A5;    
+}
+
