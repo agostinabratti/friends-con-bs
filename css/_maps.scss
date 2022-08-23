@@ -1,0 +1,13 @@
+$colorDeFondo: rgb(238, 238, 63);
+$colorDeFooter: rgb(128, 133, 211);
+$colorDeLetras: yellow;
+
+//colores
+
+$color (
+    'background': $colorDeFondo;
+    'pie': $colorDeFooter;
+    'letras': $colorDeLetras;
+
+);
+@debug map-get($map: $color, $key: $colorDeFooter )

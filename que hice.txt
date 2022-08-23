@@ -1,0 +1,1 @@
+cambie el h1 por uno mas correcto, agregue todas las keywords, el meta name de descripcion resumi la pagina, a todas las fotos de la web y de los carruseles les cambie el atributo alt, puse title en el mapa del footer.

@@ -1,0 +1,4 @@
+@mixin colores ($color $imagen) {
+    background-color: $color;
+    background-image: $imagen;
+}
