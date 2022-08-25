@@ -1,15 +1,14 @@
 @import './_variables.scss';
 @import './_extend.scss';
 @import './_mediaq.scss';
-@import './mixin';
-@import './maps';
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700');
 
 html{ font-size: 62.5%}
 
 *{margin: 0; padding: 0;}
 
 body {
-background-color: rgb(238, 238, 63);
+background-color:  rgb(245, 245, 37);
 }
 header {
     display: flex;
@@ -56,25 +55,20 @@ h1 {
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         display: inline-block;
-        margin: 3rem;
-}
-h2 {
-        font-size: 3rem;
-        font-family: 'friends';
-        text-align: center;
-        margin: 3rem;
-        color:rgb(152, 115, 177)
-}
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 15rem;
+    }
 
 @keyframes animacion {
     0% {color: purple;}
     13% {left: 50px;}
-    25% {color: blueviolet; left: 100px;}
-    35% {left: 150px}
-    50% {color: blue; left: 250px;}
+    25% {color: blueviolet; left: 150px;}
+    35% {left: 275px}
+    50% {color: blue; left: 400px;}
     65% {left: 350px;}
     75% {color: blueviolet; left: 250px; }
-    85% {left: 150px;}
+    85% {left: 275px;}
     100% {color: purple; left: 50px;}
 }
 p {
@@ -83,7 +77,7 @@ p {
 }
 .personajes {
     @extend %flex;
-    margin: 2rem;
+    margin: 4rem;
     
 }
 .imagenesPersonajes {
@@ -155,12 +149,12 @@ p {
     margin-left: 2rem;
     margin-top: 4rem;
     align-self: center;
-    font-size: $letra;
+    font-size: 2.2rem;
 }
 
 .mainparrafo{   
     font-size: $letra;
-    margin: 0rem 0.5rem 3rem 2rem;
+    margin: 3rem 0.5rem 3rem 2rem;
     padding-right: 2rem;   
 }
 .fixed{
@@ -186,11 +180,25 @@ footer{
     @extend %flex;
 }
 // episodios
- .hoverlist :hover {
+.dropdown {
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 10rem;
+    margin-left: 6rem;
+    size: 10rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    color: aqua;
+
+}
+
+ .hoverlist {
     display: flex;
     flex-direction: column;
-    margin: 3rem;
     padding: 2px;
+    display: inline-block;
  }
  nav  {
     align-self: center;
@@ -262,7 +270,7 @@ div p {
     }
     .hoverlist {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         padding: 0.5px;
@@ -274,7 +282,6 @@ div p {
         flex-wrap: wrap;
         padding: 0.5rem;
     }
-
     .imagenesMobile img{
       width: 100%;
     }
@@ -284,7 +291,7 @@ div p {
     footer {        
         padding: 0%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-around;
 
@@ -300,11 +307,8 @@ div p {
         margin-left: 12%;                 
         
     }
-
-
     .palabrasfooter1, .palabrasfooter2,.palabrasfooter3, .palabrasfooter4,.palabrasfooter5, .palabrasfooter6 {
-        display: none;
-        
+        display: none;        
     }
     
     @keyframes animacion {
@@ -315,4 +319,74 @@ div p {
         100% {color: purple; bottom: 10px;}
     }
     
+}
+
+h4 {
+    height: 10rem;
+    overflow: hidden;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black; 
+}
+
+.wordCarousel {
+    font-size: 46px;
+    font-weight: 100;
+    color: #eee;
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        padding-top: 10px;
+        margin-top: -10px;
+        li {
+            font-family: 'Amatic SC', cursive;
+            color: #eee;
+            font-weight: 700;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+        }
+    }
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip3 {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+    0% { margin-top: -360px; }
+    5% { margin-top: -270px; }
+    25% { margin-top: -270px; }
+    30% { margin-top: -180px; }
+    50% { margin-top: -180px; }
+    55% { margin-top: -90px; }
+    75% { margin-top: -90px; }
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
 }

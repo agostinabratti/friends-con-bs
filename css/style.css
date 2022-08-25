@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700");
 .iconosfooter, .personajes, header nav {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-  background-color: rgb(238, 238, 63);
+  background-color: rgb(245, 245, 37);
 }
 
 header {
@@ -66,7 +67,9 @@ h1 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   display: inline-block;
-  margin: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 15rem;
 }
 
 @-webkit-keyframes animacion {
@@ -78,14 +81,14 @@ h1 {
   }
   25% {
     color: blueviolet;
-    left: 100px;
+    left: 150px;
   }
   35% {
-    left: 150px;
+    left: 275px;
   }
   50% {
     color: blue;
-    left: 250px;
+    left: 400px;
   }
   65% {
     left: 350px;
@@ -95,7 +98,7 @@ h1 {
     left: 250px;
   }
   85% {
-    left: 150px;
+    left: 275px;
   }
   100% {
     color: purple;
@@ -112,14 +115,14 @@ h1 {
   }
   25% {
     color: blueviolet;
-    left: 100px;
+    left: 150px;
   }
   35% {
-    left: 150px;
+    left: 275px;
   }
   50% {
     color: blue;
-    left: 250px;
+    left: 400px;
   }
   65% {
     left: 350px;
@@ -129,7 +132,7 @@ h1 {
     left: 250px;
   }
   85% {
-    left: 150px;
+    left: 275px;
   }
   100% {
     color: purple;
@@ -142,7 +145,7 @@ p {
 }
 
 .personajes {
-  margin: 2rem;
+  margin: 4rem;
 }
 
 .imagenesPersonajes {
@@ -224,12 +227,12 @@ p {
   margin-left: 2rem;
   margin-top: 4rem;
   align-self: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .mainparrafo {
   font-size: 2rem;
-  margin: 0rem 0.5rem 3rem 2rem;
+  margin: 3rem 0.5rem 3rem 2rem;
   padding-right: 2rem;
 }
 
@@ -254,11 +257,24 @@ footer {
   margin-top: 2rem;
 }
 
-.hoverlist :hover {
+.dropdown {
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 10rem;
+  margin-left: 6rem;
+  size: 10rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+  color: aqua;
+}
+
+.hoverlist {
   display: flex;
   flex-direction: column;
-  margin: 3rem;
   padding: 2px;
+  display: inline-block;
 }
 
 nav {
@@ -330,7 +346,7 @@ div p {
   }
   .hoverlist {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     padding: 0.5px;
@@ -351,7 +367,7 @@ div p {
   footer {
     padding: 0%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
   }
@@ -416,5 +432,210 @@ div p {
       color: purple;
       bottom: 10px;
     }
+  }
+}
+h4 {
+  height: 10rem;
+  overflow: hidden;
+  font-family: "Amatic SC", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.wordCarousel {
+  font-size: 46px;
+  font-weight: 100;
+  color: #eee;
+}
+.wordCarousel div {
+  overflow: hidden;
+  position: relative;
+  float: right;
+  height: 65px;
+  padding-top: 10px;
+  margin-top: -10px;
+}
+.wordCarousel div li {
+  font-family: "Amatic SC", cursive;
+  color: #eee;
+  font-weight: 700;
+  padding: 0 10px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: block;
+}
+
+.flip2 {
+  -webkit-animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+  -webkit-animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip4 {
+  -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@-webkit-keyframes flip3 {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@keyframes flip3 {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@-webkit-keyframes flip4 {
+  0% {
+    margin-top: -360px;
+  }
+  5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -270px;
+  }
+  30% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -180px;
+  }
+  55% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: -90px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@keyframes flip4 {
+  0% {
+    margin-top: -360px;
+  }
+  5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -270px;
+  }
+  30% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -180px;
+  }
+  55% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: -90px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
   }
 }/*# sourceMappingURL=style.css.map */
