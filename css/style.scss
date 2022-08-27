@@ -26,7 +26,8 @@ header {
         @extend %flex;
         ul {
             list-style: none;           
-            font-family: 'Darker Grotesque', sans-serif;            
+            font-family: 'Darker Grotesque', sans-serif; 
+                      
             li {
                 display: inline-block;
                 a {
@@ -35,7 +36,13 @@ header {
                     margin: 1rem;
                     margin-bottom: 1rem;
                     padding-bottom: 1rem;
-                    color:yellow;                    
+                    color:yellow;   
+                    border: 1px black solid;
+                    background-color: blueviolet; 
+                    border-radius: 25%; 
+                    &:hover {
+                        transition: 1.9s ease;
+                    }                
     }
     }
     }
@@ -163,7 +170,11 @@ p {
     right: 1rem;
     bottom: 1rem;
     font-size: 2rem;
-    font-family: 'friends';
+    font-family: 'Darker Grotesque', sans-serif;
+    color: black;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    background-color: opacity($color: #000000);
 }
 footer{
     font-size: xx-large;
@@ -181,6 +192,7 @@ footer{
 }
 .iconosfooter {
     @extend %flex;
+    padding: 1rem;
 }
 .palabrasfooter1 {
     size: 3rem;
@@ -201,19 +213,42 @@ footer{
     background: rgb(240,241,21);
     background: linear-gradient(90deg, rgba(240,241,21,1) 31%, rgba(221,77,237,1) 99%);
 }
-.contenidotabla {
-    background: rgb(235,236,39);
-background: radial-gradient(circle, rgba(235,236,39,1) 35%, rgba(170,88,180,1) 100%);
-}
+
 
 .dropdown {
     align-items: center;
-    text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
-
-    font-size: 3rem;
+    font-size: 3rem;   
+    margin-bottom: 2rem;
+    text-align: center;
+       
+}
+.botonepisodios {
+    padding: 3px;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    border: solid black 2px;
+    width: 13rem;
+    height: 5rem;
+    background-color: blueviolet;
+    border-radius: 25%;
+    &:hover {                        
+        transition: 1.9s ease;
+    } 
     
-    
+}
+.botonepisodios1 {
+    font-size: 2rem;
+    color: blueviolet;
+    padding: 8px;
+    text-align: center;
+    align-content: center;
+    scroll-behavior: smooth;
+    &:hover {
+        background-color: blueviolet;
+        font-size: 2.2rem;
+        color: yellow;
+    }
 }
 
  .hoverlist {
@@ -243,7 +278,9 @@ table {
     font-size: $letra;
     font-family: 'Darker Grotesque', sans-serif;  
     margin-bottom: 5rem;
-    margin: 2rem;  
+    margin: 2rem; 
+    background: rgb(235,236,39);
+    background: linear-gradient(90deg, rgba(235,236,39,1) 0%, rgba(204,120,197,1) 61%);
 }
 .tablacolor {
     background-color: rgb(167, 34, 167);
@@ -255,7 +292,14 @@ table {
 .letra {
     font-family: 'friends';
     margin: 2rem;
+    text-align: center;
+    margin-top: 3rem;
     src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);  
+    text-decoration: none;
+    &:hover {
+        zoom: 110%;
+        color: blueviolet
+    }
     
 }
 div p {
@@ -398,27 +442,29 @@ h4 {
     99.99% { margin-top: 0px; }
     100% { margin-top: -270px; }
 }
-
 @keyframes flip3 {
-    0% { margin-top: -270px; }
-    5% { margin-top: -180px; }
-    33% { margin-top: -180px; }
-    38% { margin-top: -90px; }
-    66% { margin-top: -90px; }
-    71% { margin-top: 0px; }
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+@keyframes flip4 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
     99.99% { margin-top: 0px; }
     100% { margin-top: -270px; }
 }
 
-@keyframes flip4 {
-    0% { margin-top: -360px; }
-    5% { margin-top: -270px; }
-    25% { margin-top: -270px; }
-    30% { margin-top: -180px; }
-    50% { margin-top: -180px; }
-    55% { margin-top: -90px; }
-    75% { margin-top: -90px; }
-    80% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
+.flexepisodios {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.palabrascarrusel {
+    background-color: #7375A5;
 }

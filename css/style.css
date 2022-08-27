@@ -47,6 +47,12 @@ header nav ul li a {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   color: yellow;
+  border: 1px black solid;
+  background-color: blueviolet;
+  border-radius: 25%;
+}
+header nav ul li a:hover {
+  transition: 1.9s ease;
 }
 
 @font-face {
@@ -243,7 +249,11 @@ p {
   right: 1rem;
   bottom: 1rem;
   font-size: 2rem;
-  font-family: "friends";
+  font-family: "Darker Grotesque", sans-serif;
+  color: black;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  background-color: 1;
 }
 
 footer {
@@ -259,6 +269,10 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+}
+
+.iconosfooter {
+  padding: 1rem;
 }
 
 .palabrasfooter1 {
@@ -282,16 +296,40 @@ footer {
   background: linear-gradient(90deg, rgb(240, 241, 21) 31%, rgb(221, 77, 237) 99%);
 }
 
-.contenidotabla {
-  background: rgb(235, 236, 39);
-  background: radial-gradient(circle, rgb(235, 236, 39) 35%, rgb(170, 88, 180) 100%);
-}
-
 .dropdown {
   align-items: center;
-  text-align: center;
   font-family: "Darker Grotesque", sans-serif;
   font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.botonepisodios {
+  padding: 3px;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  border: solid black 2px;
+  width: 13rem;
+  height: 5rem;
+  background-color: blueviolet;
+  border-radius: 25%;
+}
+.botonepisodios:hover {
+  transition: 1.9s ease;
+}
+
+.botonepisodios1 {
+  font-size: 2rem;
+  color: blueviolet;
+  padding: 8px;
+  text-align: center;
+  align-content: center;
+  scroll-behavior: smooth;
+}
+.botonepisodios1:hover {
+  background-color: blueviolet;
+  font-size: 2.2rem;
+  color: yellow;
 }
 
 .hoverlist {
@@ -321,6 +359,8 @@ table {
   font-family: "Darker Grotesque", sans-serif;
   margin-bottom: 5rem;
   margin: 2rem;
+  background: rgb(235, 236, 39);
+  background: linear-gradient(90deg, rgb(235, 236, 39) 0%, rgb(204, 120, 197) 61%);
 }
 
 .tablacolor {
@@ -335,7 +375,14 @@ table {
 .letra {
   font-family: "friends";
   margin: 2rem;
+  text-align: center;
+  margin-top: 3rem;
   src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);
+  text-decoration: none;
+}
+.letra:hover {
+  zoom: 110%;
+  color: blueviolet;
 }
 
 div p {
@@ -559,21 +606,15 @@ h4 {
 }
 @-webkit-keyframes flip3 {
   0% {
-    margin-top: -270px;
+    margin-top: -180px;
   }
   5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
     margin-top: -90px;
   }
-  66% {
+  50% {
     margin-top: -90px;
   }
-  71% {
+  55% {
     margin-top: 0px;
   }
   99.99% {
@@ -585,21 +626,15 @@ h4 {
 }
 @keyframes flip3 {
   0% {
-    margin-top: -270px;
+    margin-top: -180px;
   }
   5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
     margin-top: -90px;
   }
-  66% {
+  50% {
     margin-top: -90px;
   }
-  71% {
+  55% {
     margin-top: 0px;
   }
   99.99% {
@@ -611,27 +646,15 @@ h4 {
 }
 @-webkit-keyframes flip4 {
   0% {
-    margin-top: -360px;
+    margin-top: -180px;
   }
   5% {
-    margin-top: -270px;
-  }
-  25% {
-    margin-top: -270px;
-  }
-  30% {
-    margin-top: -180px;
+    margin-top: -90px;
   }
   50% {
-    margin-top: -180px;
+    margin-top: -90px;
   }
   55% {
-    margin-top: -90px;
-  }
-  75% {
-    margin-top: -90px;
-  }
-  80% {
     margin-top: 0px;
   }
   99.99% {
@@ -643,27 +666,15 @@ h4 {
 }
 @keyframes flip4 {
   0% {
-    margin-top: -360px;
+    margin-top: -180px;
   }
   5% {
-    margin-top: -270px;
-  }
-  25% {
-    margin-top: -270px;
-  }
-  30% {
-    margin-top: -180px;
+    margin-top: -90px;
   }
   50% {
-    margin-top: -180px;
+    margin-top: -90px;
   }
   55% {
-    margin-top: -90px;
-  }
-  75% {
-    margin-top: -90px;
-  }
-  80% {
     margin-top: 0px;
   }
   99.99% {
@@ -672,4 +683,13 @@ h4 {
   100% {
     margin-top: -270px;
   }
+}
+.flexepisodios {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.palabrascarrusel {
+  background-color: #7375A5;
 }/*# sourceMappingURL=style.css.map */
