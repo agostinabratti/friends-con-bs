@@ -79,6 +79,77 @@ h1 {
     85% {left: 275px;}
     100% {color: purple; left: 50px;}
 }
+h4 {
+    height: 10rem;
+    overflow: hidden;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(19,19,148,1);
+}
+
+.wordCarousel {
+    font-size: 46px;
+    font-weight: 100;
+    color: #eee;
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        padding-top: 10px;
+        margin-top: -10px;
+        li {
+            font-family: 'Amatic SC', cursive;
+            color: #eee;
+            font-weight: 700;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+        }
+    }
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+@keyframes flip3 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+@keyframes flip4 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+.flexepisodios {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.palabrascarrusel {
+    background-color: #7375A5;
+}
 p {
     font-size: $letra;
     font-family: 'Darker Grotesque', sans-serif;
@@ -89,11 +160,13 @@ p {
     
 }
 .imagenesPersonajes {
+    display: flex;
     text-align: center;
-    float: right;
     border-radius: 10%;
     padding: 2rem;
-    margin: 1rem;    
+    display: inline-block;
+    margin: 1rem;   
+    vertical-align: top;
 }
 .articleGrid{
     display: grid;
@@ -169,7 +242,7 @@ p {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: 'Darker Grotesque', sans-serif;
     color: black;
     scroll-behavior: smooth;
@@ -192,15 +265,9 @@ footer{
 }
 .iconosfooter {
     @extend %flex;
-    padding: 1rem;
+    padding: 2rem;
 }
-.palabrasfooter1 {
-    size: 3rem;
-    font-size: 3rem;
-}
-.palabrasfooter2 {
-    font-size: larger
-}
+
 // episodios
 .cuerpoEspisodios {
     background: rgb(240,241,21);
@@ -213,15 +280,12 @@ footer{
     background: rgb(240,241,21);
     background: linear-gradient(90deg, rgba(240,241,21,1) 31%, rgba(221,77,237,1) 99%);
 }
-
-
 .dropdown {
     align-items: center;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 3rem;   
     margin-bottom: 2rem;
-    text-align: center;
-       
+    text-align: center;       
 }
 .botonepisodios {
     padding: 3px;
@@ -250,7 +314,6 @@ footer{
         color: yellow;
     }
 }
-
  .hoverlist {
     display: flex;
     flex-direction: column;
@@ -323,15 +386,16 @@ div p {
     justify-content: space-around;
     row-gap: 50px;
 }
-
-
-
-
+.parrafoinvitados {
+    margin: 2rem;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: $letra;
+    padding: 2rem;
+}
  .colorparrafos :hover{
     border: 0.4rem solid black;
     background-color: #7375A5;    
 }
-
 @media screen and (max-width: 480px){
     body {
         overflow-x: hidden;
@@ -342,8 +406,8 @@ div p {
        padding: 1rem;
        justify-content: space-evenly;       
     }
-    .fixed {
-        font-size: 1rem;
+    .textoquesaco {
+        display: none;
     }
     header {
         display: flex;
@@ -361,16 +425,16 @@ div p {
     .imagenesMobile img{
       width: 100%;
     }
-    .p1 {
-        font-size: 2rem;
-    }
+    
     footer {        
         padding: 0%;
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-items: center;
         justify-content: space-around;
-
+        height: 2500px;
+        width: 100%;
     }
     h1 {
         animation-name: animacion;
@@ -393,78 +457,5 @@ div p {
         50% {color: blue; bottom: 10px;}
         75% {color: blueviolet; top: 10px; }
         100% {color: purple; bottom: 10px;}
-    }
-    
-}
-
-h4 {
-    height: 10rem;
-    overflow: hidden;
-    font-family: 'Amatic SC', cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(19,19,148,1);
-}
-
-.wordCarousel {
-    font-size: 46px;
-    font-weight: 100;
-    color: #eee;
-    div {
-        overflow: hidden;
-        position: relative;
-        float: right;
-        height: 65px;
-        padding-top: 10px;
-        margin-top: -10px;
-        li {
-            font-family: 'Amatic SC', cursive;
-            color: #eee;
-            font-weight: 700;
-            padding: 0 10px;
-            height: 45px;
-            margin-bottom: 45px;
-            display: block;
-        }
-    }
-}
-
-.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-
-@keyframes flip2 {
-    0% { margin-top: -180px; }
-    5% { margin-top: -90px;  }
-    50% { margin-top: -90px; }
-    55% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
-@keyframes flip3 {
-    0% { margin-top: -180px; }
-    5% { margin-top: -90px;  }
-    50% { margin-top: -90px; }
-    55% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
-@keyframes flip4 {
-    0% { margin-top: -180px; }
-    5% { margin-top: -90px;  }
-    50% { margin-top: -90px; }
-    55% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
-
-.flexepisodios {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.palabrascarrusel {
-    background-color: #7375A5;
+    }    
 }
