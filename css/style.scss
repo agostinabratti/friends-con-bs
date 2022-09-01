@@ -367,10 +367,8 @@ table {
 }
 div p {
     font-family: friends;
-    src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);
-    
+    src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);   
 }
-
 div p {
     font-size: $letra;
     font-family: 'Darker Grotesque', sans-serif;
@@ -396,7 +394,7 @@ div p {
     border: 0.4rem solid black;
     background-color: #7375A5;    
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 1440px){
     body {
         overflow-x: hidden;
     }
@@ -433,7 +431,7 @@ div p {
         align-items: center;
         justify-items: center;
         justify-content: space-around;
-        height: 2500px;
+        height: 300px;
         width: 100%;
     }
     h1 {
