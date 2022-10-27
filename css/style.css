@@ -621,14 +621,17 @@ div p {
   .imagenesMobile img {
     width: 100%;
   }
+  .carruselinvitados {
+    width: 90%;
+  }
   footer {
     padding: 0%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
     justify-content: space-around;
-    height: 2500px;
+    height: 210px;
     width: 100%;
   }
   h1 {
