@@ -24,28 +24,27 @@ if(localStorage.getItem("carro")) {
 }
 const contenedorJuegos = document.getElementById("contenedorJuegos");
 
-const mostrarJuegos = () => {
-    arrayJuegos.forEach((juegos) => {
-        const card = document.createElement("div");
+arrayJuegos.forEach = (juegos) => {
+   // arrayJuegos.forEach((Juegos) => {
+        let card = document.createElement("div");
         card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
         card.innerHTML = `
         <div class="card" style="width: 18rem;">
-    <img src="${juegos.img}" class="card-img-top" alt="${juegos.nombre}">
-    <div class="card-body">
+  <img src="${juegos.img}" class="card-img-top" alt="...">
+  <div class="card-body">
     <h5 class="card-title">${juegos.nombre}</h5>
     <p class="card-text">${juegos.precio}</p>
     <a href="#" class="btn btn-primary">agregar al carro</a>
   </div>
 </div>
-        `        
+        `
         contenedorJuegos.appendChild(card);
         const boton = document.getElementById(`boton${juegos.id}`);
         boton.addEventListener("click", () => {
             agregarAlCarro(juegos.id)
         })
-    })
+    }
 
-mostrarJuegos();
 const agregarAlCarro = (id) => {
     const juegos = juegos.find((juegos) => juegos.id === id);
     const productoEnCarro = carro.find((juegos) => juegos.id === id);
@@ -57,6 +56,9 @@ const agregarAlCarro = (id) => {
     }
     calcularTotal();
 }
+
+//arrayJuegos();
+
 const contenedorCarro = document.getElementById("contenedorCarro");
 
 const verCarro = document.getElementById("verCarro");
@@ -64,6 +66,7 @@ const verCarro = document.getElementById("verCarro");
 verCarro.addEventListener("click", () => {
     mostrarCarro();
 });
+
 
 const mostrarCarro = () => {
     contenedorCarro.innerHTML="";
@@ -109,6 +112,7 @@ const eliminarTodoElCarro = () => {
     mostrarCarro(); 
     localStorage.clear();
 }
+
 const total = document.getElementById("total");
 
 const calcularTotal = () => {
@@ -117,4 +121,4 @@ const calcularTotal = () => {
         totalCompra += juegos.precio * juegos.cantidad;   
     })
     total.innerHTML = `Total: $${totalCompra}`;
-}}
+}
