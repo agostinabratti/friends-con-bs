@@ -1,10 +1,10 @@
 class Juegos {
     constructor(id, nombre, precio, img) {
         this.id = id;
-        this.nombre = nombre; 
+        this.nombre = nombre;
         this.precio = precio;
         this.img = img;
-        this.cantidad = 1; 
+        this.cantidad = 1;
     }
 }
 const pelota = new Juegos(1, "juego de la pelota", 3000, "img/el_juego_de_la_pelota.png");
@@ -13,16 +13,53 @@ const preguntas = new Juegos(3, "preguntas y respuestas", 2800, "img/eguntas_res
 const trivia = new Juegos(4, "trivia", 1500, "img/juego_de_trivia_jpg");
 const monopoly = new Juegos(5, "monopoly", 3500, "img/monopoly.jpg");
 const escena = new Juegos(6, "que escena es", 3000, "img/que_escena_es.jpg");
-const quiz = new Juegos(7,"quiz interactivo", 2700, "img/quiz_interactivo.jpg");
+const quiz = new Juegos(7, "quiz interactivo", 2700, "img/quiz_interactivo.jpg");
 
 const arrayJuegos = [pelota, dibujalos, preguntas, trivia, monopoly, escena, quiz];
 
 let carro = [];
 
-if(localStorage.getItem("carro")) {
+if (localStorage.getItem("carro")) {
     carro = JSON.parse(localStorage.getItem("carro"));
 }
 const contenedorJuegos = document.getElementById("contenedorJuegos");
+
+const boton = document.getElementById(`boton`);
+boton.addEventListener("click", () => {
+    agregarAlCarro(1)
+})
+
+const agregarAlCarro = (id) => {
+    const juegos = arrayJuegos.find((juegos) => juegos.id === id);
+    const productoEnCarro = carro.find((juegos) => juegos.id === id);
+    if (productoEnCarro) {
+        productoEnCarro.cantidad++;
+    } else {
+        carro.push(juegos);
+        localStorage.setItem("carro", JSON.stringify(carro));
+    }
+    calcularTotal();
+}
+
+const vaciarCarro = document.getElementById("vaciarCarro");
+
+vaciarCarro.addEventListener("click", () => {
+    eliminarTodoElCarro();
+})
+
+const eliminarTodoElCarro = () => {
+    carro = [];
+    calcularTotal();
+    localStorage.clear();
+}
+
+const calcularTotal = () => {
+    let totalCompra = 0; 
+    carro.forEach((juegos) => {
+        totalCompra += juegos.precio * juegos.cantidad;   
+    })
+    total.innerHTML = `Total: $${totalCompra}`;
+}
 
 const mostrarJuegos = () => {
     arrayJuegos.forEach((juegos) => {
@@ -37,40 +74,26 @@ const mostrarJuegos = () => {
     <a href="#" class="btn btn-primary">agregar al carro</a>
   </div>
 </div>
-        `        
+        `
         contenedorJuegos.appendChild(card);
-        const boton = document.getElementById(`boton${juegos.id}`);
-        boton.addEventListener("click", () => {
-            agregarAlCarro(juegos.id)
-        })
     })
 
-mostrarJuegos();
-const agregarAlCarro = (id) => {
-    const juegos = juegos.find((juegos) => juegos.id === id);
-    const productoEnCarro = carro.find((juegos) => juegos.id === id);
-    if(productoEnCarro){
-        productoEnCarro.cantidad++;
-    }else {
-        carro.push(juegos);
-        localStorage.setItem("carro",JSON.stringify(carro));
-    }
-    calcularTotal();
-}
-const contenedorCarro = document.getElementById("contenedorCarro");
+    mostrarJuegos();
 
-const verCarro = document.getElementById("verCarro");
+    const contenedorCarro = document.getElementById("contenedorCarro");
 
-verCarro.addEventListener("click", () => {
-    mostrarCarro();
-});
+    const verCarro = document.getElementById("verCarro");
 
-const mostrarCarro = () => {
-    contenedorCarro.innerHTML="";
-    carro.forEach((juegos) => {
-        const card = document.createElement("div");
-        card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
-        card.innerHTML = `
+    verCarro.addEventListener("click", () => {
+        mostrarCarro();
+    });
+
+    const mostrarCarro = () => {
+        contenedorCarro.innerHTML = "";
+        carro.forEach((juegos) => {
+            const card = document.createElement("div");
+            card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
+            card.innerHTML = `
             <div class="card">
                 <img src="${juegos.img}" class="card-img-top imgProductos" alt="${juegos.nombre}">
                 <div class="card-body">
@@ -81,40 +104,25 @@ const mostrarCarro = () => {
                 </div>
             </div>
         `
-        contenedorCarro.appendChild(card);
-        const boton = document.getElementById(`eliminar${juegos.id}`);
-        boton.addEventListener("click", () => {
-            eliminarDelCarro(juegos.id);
+            contenedorCarro.appendChild(card);
+            const boton = document.getElementById(`eliminar${juegos.id}`);
+            boton.addEventListener("click", () => {
+                eliminarDelCarro(juegos.id);
+            })
         })
-    })
-    calcularTotal();
+        calcularTotal();
+    }
+
+
+    const eliminarDelCarro = (id) => {
+        const juegos = carro.find((juegos) => juegos.id === id);
+        const indice = carro.indexOf(juegos);
+        carro.splice(indice, 1);
+        mostrarCarro();
+        localStorage.setItem("carro", JSON.stringify(carro));
+    }
+
+
+    const total = document.getElementById("total");
+
 }
-
-
-const eliminarDelCarro = (id) => {
-    const juegos = carro.find((juegos) => juegos.id === id);
-    const indice = carro.indexOf(juegos);
-    carro.splice(indice, 1);
-    mostrarCarro();
-    localStorage.setItem("carro", JSON.stringify(carro));
-}
-const vaciarCarro = document.getElementById("vaciarCarro");
-
-vaciarCarro.addEventListener("click", () => {
-    eliminarTodoElCarro();
-}) 
-
-const eliminarTodoElCarro = () => {
-    carro = [];
-    mostrarCarro(); 
-    localStorage.clear();
-}
-const total = document.getElementById("total");
-
-const calcularTotal = () => {
-    let totalCompra = 0; 
-    carro.forEach((juegos) => {
-        totalCompra += juegos.precio * juegos.cantidad;   
-    })
-    total.innerHTML = `Total: $${totalCompra}`;
-}}
