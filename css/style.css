@@ -325,20 +325,7 @@ h4 {
 .palabrascarrusel {
   background-color: #7375A5;
 }
-.cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  
-}
-.card {
-  margin: 0.5rem;
-  padding: 1rem;
-  z-index: auto;
-  width: 18rem;
-}
+
 p {
   font-size: 2.2rem;
   font-family: "Darker Grotesque", sans-serif;

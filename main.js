@@ -82,6 +82,38 @@ const mostrarJuegos = () => {
 
     const contenedorCarro = document.getElementById("contenedorCarro");
 
+    const verCarro = document.getElementById("verCarro");
+
+    verCarro.addEventListener("click", () => {
+        mostrarCarro();
+    });
+
+    const mostrarCarro = () => {
+        contenedorCarro.innerHTML = "";
+        carro.forEach((juegos) => {
+            const card = document.createElement("div");
+            card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
+            card.innerHTML = `
+            <div class="card">
+                <img src="${juegos.img}" class="card-img-top imgProductos" alt="${juegos.nombre}">
+                <div class="card-body">
+                <h5 class="card-title"> ${juegos.nombre} </h5>
+                <p class="card-text"> ${juegos.precio} </p>
+                <p class="card-text"> ${juegos.cantidad} </p>
+                <button class="btn colorBoton" id="eliminar${juegos.id}"> Eliminar Producto </button>
+                </div>
+            </div>
+        `
+            contenedorCarro.appendChild(card);
+            const boton = document.getElementById(`eliminar${juegos.id}`);
+            boton.addEventListener("click", () => {
+                eliminarDelCarro(juegos.id);
+            })
+        })
+        calcularTotal();
+    }
+
+
     const eliminarDelCarro = (id) => {
         const juegos = carro.find((juegos) => juegos.id === id);
         const indice = carro.indexOf(juegos);
