@@ -1,0 +1,712 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700");
+.iconosfooter, .personajes, header nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(245, 245, 37);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: url(https://i.etsystatic.com/29404973/r/il/4398e1/3199260157/il_570xN.3199260157_mfws.jpg);
+  padding: 1px, 2px;
+  width: 100%;
+  height: 4%;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+header nav ul {
+  list-style: none;
+  font-family: "Darker Grotesque", sans-serif;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  font-size: 2.2rem;
+  text-decoration: none;
+  margin: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  color: yellow;
+  border: 1px black solid;
+  background-color: blueviolet;
+  border-radius: 25%;
+}
+header nav ul li a:hover {
+  transition: 1.9s ease;
+}
+
+@font-face {
+  font-family: "friends";
+  src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);
+}
+h1 {
+  font-size: 3rem;
+  font-family: "friends";
+  text-align: center;
+  -webkit-animation-name: animacion;
+          animation-name: animacion;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  position: relative;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 15rem;
+}
+
+@-webkit-keyframes animacion {
+  0% {
+    color: purple;
+  }
+  13% {
+    left: 50px;
+  }
+  25% {
+    color: blueviolet;
+    left: 150px;
+  }
+  35% {
+    left: 275px;
+  }
+  50% {
+    color: blue;
+    left: 400px;
+  }
+  65% {
+    left: 350px;
+  }
+  75% {
+    color: blueviolet;
+    left: 250px;
+  }
+  85% {
+    left: 275px;
+  }
+  100% {
+    color: purple;
+    left: 50px;
+  }
+}
+
+@keyframes animacion {
+  0% {
+    color: purple;
+  }
+  13% {
+    left: 50px;
+  }
+  25% {
+    color: blueviolet;
+    left: 150px;
+  }
+  35% {
+    left: 275px;
+  }
+  50% {
+    color: blue;
+    left: 400px;
+  }
+  65% {
+    left: 350px;
+  }
+  75% {
+    color: blueviolet;
+    left: 250px;
+  }
+  85% {
+    left: 275px;
+  }
+  100% {
+    color: purple;
+    left: 50px;
+  }
+}
+h4 {
+  height: 10rem;
+  overflow: hidden;
+  font-family: "Amatic SC", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(19, 19, 148);
+}
+
+.wordCarousel {
+  font-size: 46px;
+  font-weight: 100;
+  color: #eee;
+}
+.wordCarousel div {
+  overflow: hidden;
+  position: relative;
+  float: right;
+  height: 65px;
+  padding-top: 10px;
+  margin-top: -10px;
+}
+.wordCarousel div li {
+  font-family: "Amatic SC", cursive;
+  color: #eee;
+  font-weight: 700;
+  padding: 0 10px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: block;
+}
+
+.flip2 {
+  -webkit-animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+  -webkit-animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip4 {
+  -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+          animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@-webkit-keyframes flip3 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@keyframes flip3 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@-webkit-keyframes flip4 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+@keyframes flip4 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+.flexepisodios {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.palabrascarrusel {
+  background-color: #7375A5;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+.card {
+  margin: 0.5rem;
+  padding: 1rem;
+  z-index: auto;
+  width: 18rem;
+}
+p {
+  font-size: 2.2rem;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.personajes {
+  margin: 4rem;
+}
+
+.imagenesPersonajes {
+  display: flex;
+  text-align: center;
+  border-radius: 10%;
+  padding: 2rem;
+  display: inline-block;
+  margin: 1rem;
+  vertical-align: top;
+}
+
+.articleGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 110px);
+  text-align: center;
+  padding-bottom: 1rem;
+  grid-template-areas: "p1 f1 f2 f3" "p1 n1 n2 n3" "p1 f4 f5 f6" "p1 n4 n5 n6";
+}
+
+.f1 {
+  grid-area: f1;
+  margin-top: 10px;
+}
+
+.f2 {
+  grid-area: f2;
+  margin-top: 10px;
+}
+
+.f3 {
+  grid-area: f3;
+  margin-top: 10px;
+}
+
+.f4 {
+  grid-area: f4;
+}
+
+.f5 {
+  grid-area: f5;
+}
+
+.f6 {
+  grid-area: f6;
+}
+
+.n1 {
+  grid-area: n1;
+  margin-top: 20px;
+}
+
+.n2 {
+  grid-area: n2;
+  margin-top: 20px;
+}
+
+.n3 {
+  grid-area: n3;
+  margin-top: 20px;
+}
+
+.n4 {
+  grid-area: n4;
+  padding-top: 7px;
+}
+
+.n5 {
+  grid-area: n5;
+  padding-top: 7px;
+}
+
+.n6 {
+  grid-area: n6;
+  padding-top: 7px;
+}
+
+.p1 {
+  grid-area: p1;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  align-self: center;
+  font-size: 2.2rem;
+}
+
+.mainparrafo {
+  font-size: 2.2rem;
+  margin: 3rem 0.5rem 3rem 2rem;
+  padding-right: 2rem;
+}
+
+.fixed {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 2.5rem;
+  font-family: "Darker Grotesque", sans-serif;
+  color: black;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  background-color: 1;
+}
+
+footer {
+  font-size: xx-large;
+  border: 1px solid rgb(5, 5, 5);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(19, 19, 148) 0%, rgb(0, 212, 255) 100%);
+  width: 100%;
+  height: 195px;
+  padding: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.iconosfooter {
+  padding: 2rem;
+}
+
+.cuerpoEspisodios {
+  background: rgb(240, 241, 21);
+  background: linear-gradient(90deg, rgb(240, 241, 21) 31%, rgb(221, 77, 237) 99%);
+}
+
+.listadoepi {
+  text-align: center;
+  font-weight: bold;
+  background: rgb(240, 241, 21);
+  background: linear-gradient(90deg, rgb(240, 241, 21) 31%, rgb(221, 77, 237) 99%);
+}
+
+.dropdown {
+  align-items: center;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.botonepisodios {
+  padding: 3px;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  border: solid black 2px;
+  width: 13rem;
+  height: 5rem;
+  background-color: blueviolet;
+  border-radius: 25%;
+}
+.botonepisodios:hover {
+  transition: 1.9s ease;
+}
+
+.botonepisodios1 {
+  font-size: 2rem;
+  color: blueviolet;
+  padding: 8px;
+  text-align: center;
+  align-content: center;
+  scroll-behavior: smooth;
+}
+.botonepisodios1:hover {
+  background-color: blueviolet;
+  font-size: 2.2rem;
+  color: yellow;
+}
+
+.hoverlist {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  display: inline-block;
+}
+
+nav {
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+nav a {
+  font-size: 2.2rem;
+  background-color: rgb(152, 115, 177);
+  border: solid 1px black;
+  margin: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+table {
+  font-size: 2.2rem;
+  font-family: "Darker Grotesque", sans-serif;
+  margin-bottom: 5rem;
+  margin: 2rem;
+  background: rgb(235, 236, 39);
+  background: linear-gradient(90deg, rgb(235, 236, 39) 0%, rgb(204, 120, 197) 61%);
+}
+
+.tablacolor {
+  background-color: rgb(167, 34, 167);
+  color: yellow;
+}
+
+.listadoDeEpisodios {
+  margin: 1rem;
+}
+
+.letra {
+  font-family: "friends";
+  margin: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);
+  text-decoration: none;
+}
+.letra:hover {
+  zoom: 110%;
+  color: blueviolet;
+}
+
+div p {
+  font-family: friends;
+  src: url(../fontfriends/Font-Friends-Gregor-Miller.TTF);
+}
+
+div p {
+  font-size: 2.2rem;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.imagenesMobile img {
+  margin: 3rem;
+  padding: 3rem;
+}
+
+.flexVideos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 50px;
+}
+
+.parrafoinvitados {
+  margin: 2rem;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.colorparrafos :hover {
+  border: 0.4rem solid black;
+  background-color: #7375A5;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  .articleGrid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+  .textoquesaco {
+    display: none;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainparrafo {
+    margin: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  .imagenesMobile img {
+    width: 100%;
+  }
+  .carruselinvitados {
+    width: 90%;
+  }
+  footer {
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    height: 210px;
+    width: 100%;
+  }
+  h1 {
+    -webkit-animation-name: animacion;
+            animation-name: animacion;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    position: relative;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    display: inline-block;
+    margin-left: 12%;
+  }
+  .palabrasfooter1, .palabrasfooter2, .palabrasfooter3, .palabrasfooter4, .palabrasfooter5, .palabrasfooter6 {
+    display: none;
+  }
+  @-webkit-keyframes animacion {
+    0% {
+      color: purple;
+      bottom: 10px;
+    }
+    25% {
+      color: blueviolet;
+      top: 10px;
+    }
+    50% {
+      color: blue;
+      bottom: 10px;
+    }
+    75% {
+      color: blueviolet;
+      top: 10px;
+    }
+    100% {
+      color: purple;
+      bottom: 10px;
+    }
+  }
+  @keyframes animacion {
+    0% {
+      color: purple;
+      bottom: 10px;
+    }
+    25% {
+      color: blueviolet;
+      top: 10px;
+    }
+    50% {
+      color: blue;
+      bottom: 10px;
+    }
+    75% {
+      color: blueviolet;
+      top: 10px;
+    }
+    100% {
+      color: purple;
+      bottom: 10px;
+    }
+  }
+}/*# sourceMappingURL=style.css.map */
